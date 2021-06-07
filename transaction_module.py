@@ -73,7 +73,28 @@ def transaction(accounts_path, line_number):
 
     #this needs to print on a newline
     with open (f'{account_number}.txt', 'a') as transaction_history:
-        transaction_history.write(f'{person_involved}, {transaction_amount}, {date_of_transaction}')    
+        transaction_history.write(f'{person_involved}, {transaction_amount}, {date_of_transaction}\n')
+
+
+
+
+    #open the file
+    #find the line where the account number matches
+    #change the balance value
+    #re write the whole file
+
+    
+
+    # with open(accounts_path, 'r') as accounts_file:
+    #     #list of all the lines in the accounts file where each item is 1 line from the file
+    #     accounts_list = accounts_file.readlines()
+    #     #split the string at index line_number into a list of separate values
+    #     split_line = accounts_list[line_number].split(', ')
+    #     #if the 2nd element in the split_line list matches the inputted password, the user has successfully logged in
+    #     account_number = split_line[4]
+
+
+
 
 
 def homepage():

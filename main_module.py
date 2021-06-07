@@ -26,20 +26,16 @@ def sign_up(accounts_path):
         
         first_name = input('What is your first name? ')
         last_name = input('What is your last name? ')
-        #requires syntax check, must include a @
-        email_address = input('What is your email address? ')
-        #requires syntax check
-        phone_number = input('What is your phone number? ')
 
-        print (f'Password: {password}, First Name: {first_name}, Last Name: {last_name}, Email Address: {email_address}, Phone Number: {phone_number}\n')
+        print (f'Password: {password}, First Name: {first_name}, Last Name: {last_name}\n')
         
         if input('Is this information correct, yes or no? ').lower() == 'yes':
             accept_info = True
             account_number = str(file_creation_module.account_number_generator(accounts_path))
-            file_creation_module.account_creation(accounts_path, account_number, password, first_name, last_name, email_address, phone_number)
+            file_creation_module.account_creation(accounts_path, account_number, password, first_name, last_name)
             print ('Account created successfully')
             print ('Your account information is as follows:')
-            print (f'Account Number: {account_number} Password: {password}, First Name: {first_name}, Last Name: {last_name}, Email Address: {email_address}, Phone Number: {phone_number}\n')
+            print (f'Account Number: {account_number} Password: {password}, First Name: {first_name}, Last Name: {last_name}\n')
             
         else:
             print ('Invalid input')

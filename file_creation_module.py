@@ -39,13 +39,13 @@ def account_number_generator(accounts_path):
 
 #this function takes input from the sign_up function in order to append the account to the accounts file
 #this function is automatically called at the end of the sign_up function
-def account_creation(accounts_path, account_number, password, first_name, last_name, email_address, phone_number):
+def account_creation(accounts_path, account_number, password, first_name, last_name):
     #once the user likes all of the info, we append it to a newline in the accounts file
     #each entry is separated by commas
     with open(accounts_path, 'a') as accounts_file:
         #appends a newline and the user info
         accounts_file.write('\n')
-        accounts_file.write(f'{account_number}, {password}, {first_name}, {last_name}, {email_address}, {phone_number}, 0')
+        accounts_file.write(f'{account_number}, {password}, {first_name}, {last_name}, 0')
         #call a function to read from the file
         transaction_history_file_creation(account_number)
 
@@ -59,7 +59,7 @@ def transaction_history_file_creation(account_number):
         #create a new text file with the account number as its name
         with open(transaction_history_path, 'w') as transaction_history_file:
             #writes the default columns for the transaction history
-            lines_to_write = 'Transaction Associate, Money Exchanged, Date of Transaction, Balance'
+            lines_to_write = 'Transaction Associate, Money Exchanged, Date of Transaction\n'
             transaction_history_file.write(lines_to_write)
             print ('New transaction history file created\n')
 

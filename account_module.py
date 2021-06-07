@@ -31,7 +31,7 @@ def delete_account(accounts_path, line_number):
     with open (accounts_path, 'r') as accounts_file:
         accounts_list = accounts_file.readlines()
         split_line = accounts_list[line_number].split(', ')
-        balance = int(split_line[6])
+        balance = int(split_line[4])
         if balance < 0:
             print ('Accounts with a balance of 0 or less cannot be deleted, please pay back your debt first')
             print ('Returning to account options page')
@@ -42,7 +42,7 @@ def delete_account(accounts_path, line_number):
 
         print ('A check for your remaining balance has been generated')
         with open (f'Check for {split_line[2]} {split_line[3]}.txt', 'w') as check_file:
-            check_file.write(f'Your remaining balance of {split_line[6]} will be mailed to you in 7 to 10 business days')
+            check_file.write(f'Your remaining balance of {split_line[4]} will be mailed to you in 7 to 10 business days')
         
 
         del accounts_list[line_number]
