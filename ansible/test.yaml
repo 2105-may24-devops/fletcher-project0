@@ -1,7 +1,0 @@
-#this is a test
-#a playbook with one play
-- hosts: all
-  tasks:
-  - file:
-      path: ./ansible_was_here
-      state: touch
