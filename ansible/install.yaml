@@ -1,9 +1,9 @@
 ---
 # These tasks install and update python3 and git
 
-- name: Install python3 and venv
+- name: Install python3 and venv and git
   hosts: all
-  
+
   tasks:
     - name: install python3
       ansible.builtin.package:
