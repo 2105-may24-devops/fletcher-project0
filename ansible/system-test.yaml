@@ -1,0 +1,10 @@
+#this runs the bash script for system testing hopefully
+- name: system test script
+  hosts: all
+
+  tasks:
+    - name: run bash test script
+      ansible.builtin.script:
+        #path to the script
+        cmd: ~/project0/testscript.sh
+        chdir: ~/project0

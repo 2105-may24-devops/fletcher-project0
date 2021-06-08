@@ -1,7 +1,7 @@
 #ansible file for uninstalling project
 - name: remove project folder from hosts
   hosts: all
-  
+  become: yes
   tasks:
     - name: uninstall project
       file:
