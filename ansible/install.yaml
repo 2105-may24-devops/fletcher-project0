@@ -3,6 +3,7 @@
 
 - name: Install python3 and venv
   hosts: all
+  
   tasks:
     - name: install python3
       ansible.builtin.package:
@@ -11,4 +12,8 @@
     - name: install python3-venv
       ansible.builtin.package:
         name: python3-venv
+        state: latest
+    - name: install git
+      ansible.builtin.package:
+        name: git
         state: latest
