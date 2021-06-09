@@ -4,8 +4,8 @@
   become: yes
   tasks:
 
-    - name: clone repo
-      ansibile.builtin.git:
+  - name: clone repo
+    ansibile.builtin.git:
       repo: https://github.com/2105-may24-devops/fletcher-project0
       clone: yes
       dest: home/fletcher/project0
