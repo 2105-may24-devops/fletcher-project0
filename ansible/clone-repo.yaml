@@ -8,5 +8,5 @@
     ansible.builtin.git:
       repo: https://github.com/2105-may24-devops/fletcher-project0
       clone: yes
-      dest: home/fletcher/project0
+      dest: /home/fletcher/project0
       version: main
