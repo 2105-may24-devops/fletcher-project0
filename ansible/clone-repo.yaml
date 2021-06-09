@@ -4,10 +4,6 @@
   become: yes
   tasks:
 
-    - name: make project folder
-      ansible.builtin.file:
-      state: touch
-      path: home/fletcher/project0
     - name: clone repo
       ansibile.builtin.git:
       repo: https://github.com/2105-may24-devops/fletcher-project0
