@@ -7,9 +7,9 @@
     - name: make project folder
       ansible.builtin.file:
       state: touch
-      path: ~/project0
+      path: home/fletcher/project0
     - name: clone repo
       ansibile.builtin.git:
       repo: https://github.com/2105-may24-devops/fletcher-project0
       clone: yes
-      dest: ~/project0
+      dest: home/fletcher/project0
