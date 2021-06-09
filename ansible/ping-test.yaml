@@ -1,0 +1,9 @@
+---
+#ping vm3
+- name: remove project folder from hosts
+  hosts: all
+
+  tasks:
+    #gather ansible builtin package info
+   - name: Ping
+     ansible.builtin.ping:
