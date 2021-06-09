@@ -1,7 +1,7 @@
 ---
 # These tasks install and update python3 and git
 
-- name: Install python3, python3-venv, and git
+- name: Install python3, python3-venv, git and pip
   hosts: all
   become: yes
   tasks:
@@ -16,4 +16,8 @@
     - name: install git
       ansible.builtin.package:
         name: git
+        state: latest
+    - name: install pip
+      ansible.builtin.package:
+        name: python3-pip
         state: latest
