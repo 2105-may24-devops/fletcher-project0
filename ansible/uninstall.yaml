@@ -6,4 +6,4 @@
     - name: uninstall project
       file:
         state: absent
-        path: ~/project0
+        path: /home/fletcher/project0
